@@ -1,0 +1,29 @@
+---
+id: 124
+title: 'San Diego Part 2:  The Trip'
+author: Wyatt
+layout: post
+guid: http://blog.hackerforhire.org/?p=124
+permalink: /2006/06/30/san-diego-part-2-the-trip/
+autometa:
+  - boat dave headed trip original jolla discounted runners
+categories:
+  - General
+---
+Well, if you read the rant, you&#8217;ll know that travel out in the great state of California was not the highlight of my trip; however, there are a bunch of other things that are worth mentioning.  
+<!--more-->
+
+  
+Steve and I got into the Hotel around 01:00AM PST on Thursday and found Joe attempting to sleep. We crashed for about 6 hours and then we headed off to the airport to pickup Dave from dealing with his good friend Raphael, the baggage mangler (check the rant for details on that story). Anyway, after getting Dave a swim suit, we headed down to the Mission Beach area of La Jolla (pronounced La Hoy-aa &#8230; DAVE!!!), we got everyone together at the boat rental place. They didn&#8217;t have the original boat we reserved due to a mechanical issue; however, they did give us a smaller one at a discounted price AND a second boat at about 40% of the price &#8230; which worked out pretty well considering we had an additional 2 people that just showed up and there wouldn&#8217;t have been any space left on the original boat. Aside from the bad pirate imitations and crazies on wave runners, we had an awesome time tubing; especially since many of our &#8220;skippers&#8221; felt the need to kill the people on the tubes, ramp the boats, and all that other fun stuff that goes along with the inherent risk. No, I&#8217;m not complaining &#8230; I was one of them :twisted:.
+
+After boating, we did a quick clean up and then a very no so quick stop at the diving store &#8230; for 2 hours!!! Well, Dave, Steve, and Robert rented their diving gear and the non-certified people (Joe and I) rented surf boards in an effort to humiliate ourselves in front of many people at the beach. Finishing at the dive store, we flew over to the friends dinner at a quaint little Mexican place with excellent fajitas &#8230; I got the fajitas if you couldn&#8217;t guess.
+
+Friday morning, our crew headed out for some awesome breakfast at a little coffee shop near the hotel. Sadly, we didn&#8217;t get to try their special dish of whatever it was because we didn&#8217;t see it until we were leaving and because they are closed on the weekends. Heading down to Hannah&#8217;s grandparent&#8217;s place, we passed a few car dealerships that we would come back to later (guys and a Ferrari &#8230; there&#8217;s no escaping that date) and hit a place called &#8220;Sammy&#8217;s Wood Fired Pizza&#8221; for the friends lunch. It was pretty good and I highly recommend it if you are in the La Jolla (pronounced La Hoy-aa &#8230; DAVE!!!) area.
+
+With lunch down, the left the day open for hitting the beach. Robert, Dave, and Steve went out diving and Joe and I hit the surf. I was out for about 1.75 hours before I had to come in from landing on a stingray. I did try continuing to learn to surf; however, the whole fiery cramping feeling of sting ray neurotoxin in my left leg made it a little hard to continue to stay on the board. Some what disheartened, I came out of the water, blood running of my ankle and an off duty life guard called the people to drive me down the the &#8220;sting ray&#8221; care area. If you&#8217;ve never been stung by stingray, basically the tail opens up, cuts a small hole and injects venom into you. The feeling is as close to I can liken it, like an electrical shock during the injection. The pain afterwards is pretty crappy as well; however, it doesn&#8217;t compare to the pain involved to &#8220;cure&#8221; you. Because the neurotoxin is protein, the best way to take care of it is to use extremely hot water and scald yourself for about an hour to break down the proteins. Not fun and plus it stopped me from being able to surf for the rest of the day &#8230; which I was really starting to enjoy because it is a mad physical workout &#8230; and I didn&#8217;t look to bad in a wet suit :wink:. I do take some small comfort that Rick went to the ER over his bruised shoulder for some vicodin whereas I bled out and didn&#8217;t even go to the hospital &#8230; that&#8217;s like +3 machismo points.
+
+The wedding was like nothing else I&#8217;ve ever been too. Basically, everyone sits quietly in the room until the bride and groom decide it&#8217;s time marry each other. They stand up, say their vows, and sit back down and everyone takes some time to reflect on what was said. After about 15 minutes of silence, people are invited to stand and say something if it needs to be said and then everyone thinks about what was said in silence. After there is nothing left to be said, everyone goes and signs the marriage contract-charter-thingy basically putting the care of this marriage in the hands of the community that signed the paper &#8230; I think. I could be completely off because I&#8217;m not a Quaker and know nothing about the religion.
+
+At the reception, it was a digital camera geeks wet dream. I&#8217;m probably on the low side, but I&#8217;m willing to bet there was more than $12,000 total in digital paparazzi equipment owned by the guests. The reception was good and was followed by everyone going down the the beach area and then to some micro brew place afterwards (we skipped the kegger at the hostel with the naked Australian chick &#8230; no I am not making that up either).
+
+All in all, I would call that a success. What kind of success, I&#8217;ve got no idea &#8230; but as long as the bride and groom get married and the worst thing that happens is someone gets a little miffed at the reception, I&#8217;d call it good. Feel free to add in anything you think I missed &#8230; I was there, but I wasn&#8217;t everywhere while I was :-).

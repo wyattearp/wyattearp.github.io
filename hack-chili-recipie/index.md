@@ -1,6 +1,6 @@
 ---
 id: 155
-title: Hackede Chili Recipie
+title: Hacked Chili Recipie
 author: Wyatt
 layout: page
 guid: http://blog.hackerforhire.org/?page_id=155

@@ -1,3 +1,31 @@
-url: http://blog.hackerforhire.org/
-name: Hacker for Hire
-description: 'Burning Down People&#039;s Dreams Since That One Day ...'
+title: "Hacker for Hire"
+author: "Wyatt"
+description: "Really cool blog about ... something"
+more: "read more"
+url: "http://blog.hackerforhire.org"
+
+#comments:
+#    disqus: "niklasbuschmann"
+#    isso: "comments.mysite.org"
+
+style:
+#    body: "whitesmoke"
+    padding: 33%
+    anchor: "#46f"
+    serif-heading: true
+    nav: "#181818"
+#    headline: "#06f"
+    description: "white"
+    article:
+        odd: "#ffffff"
+        even: "#222222"
+
+links:
+  - github: "https://github.com/wyattearp/"
+  - twitter: "https://twitter.com/wyattearp/"
+  - youtube: "https://www.youtube.com/user/skippymcneal"
+
+paginate: 10
+excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: false}}]
+gems: [jekyll-paginate,jekyll-feed] # include feed plugin (supported by gh-pages)

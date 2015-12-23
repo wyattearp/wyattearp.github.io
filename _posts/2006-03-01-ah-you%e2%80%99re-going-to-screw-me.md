@@ -1,6 +1,6 @@
 ---
 id: 80
-title: Ah, YouÃÂ¢Ã¢âÂ¬Ã¢âÂ¢re Going to Screw Me
+title: Ah, You&#146;re Going to Screw Me
 author: Wyatt
 excerpt: Lesson learned, always get the statement of work up front.
 layout: post

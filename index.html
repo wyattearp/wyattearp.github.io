@@ -11,7 +11,15 @@ layout: blank
 {{ page.excerpt }}
       </div>
       <footer>
+        {% capture content_words %} 
+          {{ page.content | number_of_words }} 
+        {% endcapture %} 
+        {% capture excerpt_words %} 
+          {{ page.excerpt | number_of_words }} 
+        {% endcapture %} 
+        {% if excerpt_words != content_words %}
         <p><a href="{{ page.url | prepend: site.baseurl }}">{{ site.more }} &raquo;</a></p>
+        {% endif %}
       </footer>
     </article>
     {% endfor %}

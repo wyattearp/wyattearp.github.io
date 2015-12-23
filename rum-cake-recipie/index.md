@@ -1,6 +1,6 @@
 ---
 id: 99
-title: 'Protected: Rum Cake Recipe'
+title: 'Rum Cake Recipe'
 author: Wyatt
 layout: page
 guid: http://blog.hackerforhire.org/?page_id=99

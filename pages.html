@@ -1,0 +1,10 @@
+---
+title: "Pages"
+---
+<ul>
+  {% for node in site.pages %}
+    {% if node.title and node.title != "Archive" and node.title != "Pages" %}
+      <li><a href="{{ node.url | prepend: site.baseurl }}"{% if page.url == node.url %} id="selected"{% endif %}>{{ node.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -19,7 +19,7 @@ Last night we got to check the beer and it&#8217;s done!
 Pre-bottling taste test seems to show that it has a very smooth amber-styled ale flavor with the essential hoppie notes. I hope it will taste as good if not better after fermented in the bottles for a few weeks!
 
 <div id="attachment_338" style="width: 235px" class="wp-caption alignnone">
-  <img src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/img_0083-225x300.jpg" alt="One style of bottle" title="img_0083" width="225" height="300" class="size-medium wp-image-338" />
+  <img src="{{ site.baseurl }}/wp-content/uploads/2009/03/img_0083-225x300.jpg" alt="One style of bottle" title="img_0083" width="225" height="300" class="size-medium wp-image-338" />
   
   <p class="wp-caption-text">
     One style of bottle
@@ -27,7 +27,7 @@ Pre-bottling taste test seems to show that it has a very smooth amber-styled ale
 </div>
 
 <div id="attachment_339" style="width: 235px" class="wp-caption alignnone">
-  <img src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/img_0085-225x300.jpg" alt="Test and Filter" title="img_0085" width="225" height="300" class="size-medium wp-image-339" />
+  <img src="{{ site.baseurl }}/wp-content/uploads/2009/03/img_0085-225x300.jpg" alt="Test and Filter" title="img_0085" width="225" height="300" class="size-medium wp-image-339" />
   
   <p class="wp-caption-text">
     Test and Filter
@@ -35,7 +35,7 @@ Pre-bottling taste test seems to show that it has a very smooth amber-styled ale
 </div>
 
 <div id="attachment_340" style="width: 235px" class="wp-caption alignnone">
-  <img src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/img_0086-225x300.jpg" alt="Some of the final product!" title="img_0086" width="225" height="300" class="size-medium wp-image-340" />
+  <img src="{{ site.baseurl }}/wp-content/uploads/2009/03/img_0086-225x300.jpg" alt="Some of the final product!" title="img_0086" width="225" height="300" class="size-medium wp-image-340" />
   
   <p class="wp-caption-text">
     Some of the final product

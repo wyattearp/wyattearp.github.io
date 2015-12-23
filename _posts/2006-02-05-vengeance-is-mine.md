@@ -26,7 +26,7 @@ I pulled into Starbuck&#8217;s parking lot to get a parking spot at &#8230; you 
   
   <tr>
     <td>
-      <img id="image65" src="http://blog.hackerforhire.org/wp-content/uploads/2006/02/FigureA.jpg" height="200" width="200" alt="Figure A" />
+      <img id="image65" src="{{ site.baseurl }}/wp-content/uploads/2006/02/FigureA.jpg" height="200" width="200" alt="Figure A" />
     </td>
     
     <td>

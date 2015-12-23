@@ -27,4 +27,4 @@ Instructions for Windows are the same, but you&#8217;ll have to use the Windows 
 
 Right, and I&#8217;m not responsible for you running up a trillion dollar bill with AT&T or if your spine curves or if your teeth yellow or if you drink rat poison because you fell in love with a rough trick named Jim or anything else as a result of you trying to do something to your bejebus phone <img src="http://blog.hackerforhire.org/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" />
 
- [1]: http://blog.hackerforhire.org/wp-content/uploads/2009/06/att_us.ipcc
+ [1]: {{ site.baseurl }}/wp-content/uploads/2009/06/att_us.ipcc

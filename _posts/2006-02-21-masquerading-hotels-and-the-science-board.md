@@ -22,7 +22,7 @@ Right, integrating the tangent line, we arrive back where I was, getting money f
   <tr>
     <td />
     
-    <a href="javascript:popImage('http://blog.hackerforhire.org/wp-content/uploads/2006/02/scienceboard.jpg', 'Science Board')"><img id="image74" src="http://blog.hackerforhire.org/wp-content/uploads/2006/02/scienceboard.thumbnail.jpg" alt="Science Board?" height=75 width=75/></p> 
+    <a href="javascript:popImage('{{ site.baseurl }}/wp-content/uploads/2006/02/scienceboard.jpg', 'Science Board')"><img id="image74" src="{{ site.baseurl }}/wp-content/uploads/2006/02/scienceboard.thumbnail.jpg" alt="Science Board?" height=75 width=75/></p> 
     
     <td />
     Some very poor renditions of what a &#8220;Science Board&#8221; could possibly be. Click for a lager image and feel free to add your own in the comments using the 

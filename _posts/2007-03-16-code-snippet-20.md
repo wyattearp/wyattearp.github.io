@@ -19,7 +19,7 @@ Straight from the readme.txt, Code Snippet 2.0 is is a WordPress plugin for disp
   * Download the plugin [here][1].
   * Copy archive to wp-content/plugins directory
   * Extract the zip file
-  * When extracted properly you should have following directory structure: /wp-content/plugins/codesnippet
+  * When extracted properly you should have following directory structure: {{ site.baseurl }}/wp-content/plugins/codesnippet
   * Since I&#8217;ve not tore through the code, the plugin will probably not work if extracted/copied in diffrenet directory.
   * Enable the Plugin
 

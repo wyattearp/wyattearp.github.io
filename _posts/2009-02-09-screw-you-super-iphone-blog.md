@@ -14,7 +14,7 @@ tags:
   - spammer
 ---
 Super iPhone Blog can kiss my ass. Their crappy spam bot decided to visit my site and this is the result:  
-<img src="http://blog.hackerforhire.org/wp-content/uploads/2009/02/picture-3.png" alt="suckyiphonedicks" title="suckyiphonedicks" width="464" height="611" class="alignnone size-full wp-image-286" />
+<img src="{{ site.baseurl }}/wp-content/uploads/2009/02/picture-3.png" alt="suckyiphonedicks" title="suckyiphonedicks" width="464" height="611" class="alignnone size-full wp-image-286" />
 
 If you can&#8217;t read it, here&#8217;s what they wrote:
 

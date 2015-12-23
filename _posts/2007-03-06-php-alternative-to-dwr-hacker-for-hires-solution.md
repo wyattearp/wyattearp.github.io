@@ -58,4 +58,4 @@ Now I know that I could put this encode and decode inside every [PHP][1] functio
  [5]: http://www.xajaxproject.org
  [6]: http://sanjer.berlios.de/
  [7]: http://www.json.org
- [8]: http://blog.hackerforhire.org/wp-content/uploads/2007/03/hacked-sajax.zip "Sajax Hacked"
+ [8]: {{ site.baseurl }}/wp-content/uploads/2007/03/hacked-sajax.zip "Sajax Hacked"

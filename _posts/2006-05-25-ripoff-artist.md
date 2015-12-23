@@ -33,4 +33,4 @@ See if you think it&#8217;s a fake. [I bring you the original in all of it&#8217
  [1]: http://www.yahoo.com
  [2]: http://www.ebay.com
  [3]: http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=9522329615&sspagename=ADME:B:AAQ:US:1
- [4]: http://blog.hackerforhire.org/wp-content/uploads/2006/05/ebay.htm
+ [4]: {{ site.baseurl }}/wp-content/uploads/2006/05/ebay.htm

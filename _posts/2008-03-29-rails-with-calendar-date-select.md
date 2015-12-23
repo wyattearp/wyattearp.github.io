@@ -78,4 +78,4 @@ After 2-hours of trying to find this, I find the &#8220;F(this)&#8221; so true :
  [2]: http://www.integrallis.com/ourblogs/articles/2008/01/15/building-tempo-with-rails-part-vi
  [3]: http://api.rubyonrails.org/classes/ActionView/Helpers/PrototypeHelper.html
  [4]: http://jslint.org
- [5]: http://blog.hackerforhire.org/wp-content/uploads/2008/03/format_iso_date.js "ISO Formatter for Calendar Date Select"
+ [5]: {{ site.baseurl }}/wp-content/uploads/2008/03/format_iso_date.js "ISO Formatter for Calendar Date Select"

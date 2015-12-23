@@ -32,19 +32,19 @@ I don&#8217;t know why I thought to do this especially since I think taking pict
 <div id='gallery-1' class='gallery galleryid-351 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-90fb4005-5305-4af6-bc00-562a6655bd9ajpeg/'><img width="150" height="150" src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/p-1600-1200-90fb4005-5305-4af6-bc00-562a6655bd9a-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-3.jpeg" /></a>
+      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-90fb4005-5305-4af6-bc00-562a6655bd9ajpeg/'><img width="150" height="150" src="{{ site.baseurl }}/wp-content/uploads/2009/03/p-1600-1200-90fb4005-5305-4af6-bc00-562a6655bd9a-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-3.jpeg" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-7981c2b0-8f3a-4dd2-8875-4bc9b36fb5f8jpeg/'><img width="150" height="150" src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/p-1600-1200-7981c2b0-8f3a-4dd2-8875-4bc9b36fb5f8-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-2.jpeg" /></a>
+      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-7981c2b0-8f3a-4dd2-8875-4bc9b36fb5f8jpeg/'><img width="150" height="150" src="{{ site.baseurl }}/wp-content/uploads/2009/03/p-1600-1200-7981c2b0-8f3a-4dd2-8875-4bc9b36fb5f8-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-2.jpeg" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-cccceea4-a259-4599-aa64-14994deddc85jpeg/'><img width="150" height="150" src="http://blog.hackerforhire.org/wp-content/uploads/2009/03/p-1600-1200-cccceea4-a259-4599-aa64-14994deddc85-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-1.jpeg" /></a>
+      <a href='http://blog.hackerforhire.org/2009/03/31/quick-dirty-iphone-macro-lens/p-1600-1200-cccceea4-a259-4599-aa64-14994deddc85jpeg/'><img width="150" height="150" src="{{ site.baseurl }}/wp-content/uploads/2009/03/p-1600-1200-cccceea4-a259-4599-aa64-14994deddc85-150x150.jpg" class="attachment-thumbnail" alt="iphone-macro-1.jpeg" /></a>
     </dt>
   </dl>
   

@@ -4,8 +4,8 @@ description: "Really cool blog about ... something"
 more: "read more"
 url: "http://blog.hackerforhire.org"
 
-#comments:
-#    disqus: "niklasbuschmann"
+comments:
+    disqus: "bloghackerforhireorg"
 #    isso: "comments.mysite.org"
 
 style:

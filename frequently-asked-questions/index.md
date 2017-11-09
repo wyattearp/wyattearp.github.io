@@ -27,14 +27,3 @@ In the event that you attempt to contact any member of our team to solicit **ANY
 **Will you hack &#8220;my&#8221; Yahoo, MSN, Google, MySpace, Facebook, Random stupid MMORPG account?**  
 No, I won&#8217;t. You don&#8217;t own the system, you don&#8217;t own the data on the system. Go back and read the EULA if you think that you do. Asking this type of question will again get you routed to my local FBI office.
 
-**About how much do you charge for [ Blank ]**  
-Standard pricing is as follows:
-
-  * External Auditing: **$75-$150 / hr**
-  * Code Review: **$75 / hr**
-  * Software-based Data Recovery: **$50 / hr**
-  * Password Auditing / Recovery (owned / offline systems only): ** $50 / hr / 10 passwords**
-  * Software Development: **$75-$150 / hr**
-  * Anything else: **TBD based on additional information**
-
-All prices are pending a signed statement of work. *Hacker for hire reserves the right to refuse service to anyone based on any known or unknown factors.*

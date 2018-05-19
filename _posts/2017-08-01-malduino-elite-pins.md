@@ -28,3 +28,5 @@ Here's the details ***I believe that I have correct*** - though I recommend you 
   +-----------------------------------+
 
 {% endhighlight %}
+
+**UPDATE 20170803:** Jhonti has confirmed it :)

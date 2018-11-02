@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/wyattearp
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.hackerforhire.org
+  * I am wyattearp (https://keybase.io/wyattearp) on keybase.
+  * I have a public key ASAesDqIoj4boMcy2fvHlua-r2Yj31zwAG0FmnuJmoCH3Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010192ed7e30bad805741d1f33b4109974fa67ae1c17eda4f4280f9841bbc4917bd80a",
+      "host": "keybase.io",
+      "kid": "01201eb03a88a23e1ba0c732d9fbc796e6beaf6623df5cf0006d059a7b899a8087dd0a",
+      "uid": "a73495f6878a478072539a57b2356b00",
+      "username": "wyattearp"
+    },
+    "merkle_root": {
+      "ctime": 1541191634,
+      "hash": "275c5ad431410a0c4ab420bb45d1df9547c713c7b853158a116dbcec2765b62a0bd6bfe5a9ccb9bf28f5fe25f16dc7b83ec48962d101ace43ff6ed48d646cdf8",
+      "hash_meta": "dff58a3a68b4884c8e3187544a448bc9c30a577afa73c975a0d908e59e0595a8",
+      "seqno": 3888989
+    },
+    "service": {
+      "entropy": "7PZXILun7n0cu3leHFEyesap",
+      "hostname": "blog.hackerforhire.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.9.0"
+  },
+  "ctime": 1541191647,
+  "expire_in": 504576000,
+  "prev": "aa539681963f5235861f3ea459f0643ea32c64e622dbd2011fed90b94a84c180",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHrA6iKI+G6DHMtn7x5bmvq9mI99c8ABtBZp7iZqAh90Kp3BheWxvYWTESpcCFsQgqlOWgZY/UjWGHz6kWfBkPqMsZOYi29IBH+2QuUqEwYDEIAOXuOZVoTBNGMBhnvPHY/0oBitljfKpL1g09dV1uAr+AgHCo3NpZ8RADX4BxgGST4AuCOiyORGEa6/b7UXBr4UE/FEA4Wugb9wfIvj2377EuaBNzzLIKYHbzHRWZbSfJ0waUeQ/csb7CahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPaltxP2JEQxec97kiaQhvYAnLIij6tpFdPOAReD7OVko3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/wyattearp
+
+==================================================================

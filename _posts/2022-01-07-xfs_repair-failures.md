@@ -7,7 +7,7 @@ tags: [technology,xfs,xfs_repair]
 ---
 
 # The Issue
-We have a **really** old SAN that we've been trying to migrate off of for months and just been unable to get any downtime time to do it ... but fun fact, if you don't make time for down time, down time will make time for you ... at the most in opportune time. Such is the case with our SAN that experience a failure due to a phased power outage. Upon returning the parts of the building back to normal, the ESXi / V-Sphere could no longer see the SAN and the SAN no longer wanted to mount the partitions and export them because of xfs errors (more on that at a later time).
+We have a **really** old SAN that we've been trying to migrate off of for months and just been unable to get any downtime time to do it ... but fun fact, if you don't make time for downtime, downtime will make time for you ... at the most inopportune time. Such is the case with our SAN that experience a failure due to a phased power outage. Upon returning the parts of the building back to normal, the ESXi / V-Sphere could no longer see the SAN and the SAN no longer wanted to mount the partitions and export them because of xfs errors (more on that at a later time).
 
 Normally, I wouldn't write something up about this, but ServerFault isn't letting me post the answer and [I refuse to be this guy][1]:
 

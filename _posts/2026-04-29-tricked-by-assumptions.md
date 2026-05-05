@@ -142,4 +142,4 @@ Yep. That's great. Even if I write out ascii to the terminal the `>` operator wi
 
 If you made it this far, I'm sorry, but I appreciate you sticking with me to understand the solution was to just write the file out and avoid the `>` operator and do the `cat` over on the Linux system where we don't have to worry about it changing our data.
 
-Incidentally, this isn't the first time... https://github.com/PowerShell/PowerShell/issues/20002
+Incidentally, this isn't the [first time](https://devblogs.microsoft.com/powershell/outputencoding-to-the-rescue/) this has [happened](https://stackoverflow.com/questions/1707397/using-redirection-within-the-script-produces-a-unicode-output-how-to-emit-singl) [before](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8).

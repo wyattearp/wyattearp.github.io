@@ -69,7 +69,7 @@ Every task has a rubric of specific claims an answer either does or doesn't make
 Because I am the fox guarding the hen house on this and wanted to let it run over the weekend ... grading itself is a second, separate LLM call, same model, fresh context, no tools that receives only the rubric and the trial's final answer text and returns a JSON verdict per checklist item (met/not-met plus a short
 note), which gets summed into a score. The grader never gets to see the transcript, so it
 can't be swayed by *how* the agent got there, only by what the final answer actually claims. Unfortunately, we can still trip up (as happened multiple times when debugging this crap) - the answer text itself can incidentally give away which arm produced it (an answer that name-drops a
-Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, NVIDIA or MCP Product XYZ is making any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has its own new set of stupid problems). E.g. "Here be dragons."
+Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, Nvidia or MCP Product XYZ is making any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has its own new set of stupid problems). E.g. "Here be dragons."
 
 ## Results
 
@@ -108,7 +108,7 @@ Additionally, when breaking that same data down per task makes the "it depends o
 
 ![Per-task score, by arm and agent](/wp-content/uploads/2026/mcplacebo-per-task.png)
 
-A few things jump out per-task that the averages smooth over: Claude's `mcp_only` line beats its own `shell`/`shell_mcp` lines only on `xorblob` (the by-hand-arithmetic task) and is flat-to-worse everywhere else. Part of me wonders if Antigravity pulled this out of some existing test I've not been able to find with quick searching OR if it's just so common that XOR-ing needs to happen that Sonnet has trained extensively on it in some weird way.
+A few things jump out per-task that the averages smooth over: Claude's `mcp_only` line beats its own `shell`/`shell_mcp` lines only on `xorblob` (the by-hand-arithmetic task) and is flat-to-worse everywhere else. Part of me wonders if Claude pulled this out of some existing test I've not been able to find with quick searching OR if it's just so common that XOR-ing needs to happen that Sonnet has trained extensively on it in some weird way.
 
 Codex's `mcp_only` line actually *beats* its `shell` line on `overflow` and `callgraph`, which the aggregate numbers don't show at all; and `task07_vm` is the one task where all three arms cluster together for both agents, tool access just doesn't move it. Clearly that's just "hard" because it requires more long-view style thinking to maintain a "model" of the binary and the VM in the model's context. I can't prove it, but I could easily see it getting confused on which data is the code that executes and which data is the vm code that executes, thus driving a lot of the thrash.
 

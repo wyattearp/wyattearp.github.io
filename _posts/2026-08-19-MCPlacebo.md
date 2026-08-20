@@ -19,7 +19,8 @@ If it's a placebo, the agent is doing fine because it's a capable model with a s
 
 *"An agent with access to a MCP system **WILL CONSISTENTLY** outperform the same agent restricted to to coreutils + binutils + gdb + radare2 on a set of small RE tasks."*
 
-Sadly I don't have infinite tokens to solve this side quest, but here's what I got over a weekend's worth of execution. Full disclosure, AI helped me bolt a lof this together because I have more ideas than time - you get what you get.
+Sadly I don't have infinite tokens to solve this side quest, but here's what I got over a weekend's worth of execution. Full disclosure, AI helped me bolt a lot of this together because I have more ideas than time - you get what you get.
+
 <!-- more -->
 
 ## Approach
@@ -37,7 +38,7 @@ I worked with claude and built a small harness, around three "arms" different to
 
 Two agent CLIs got run through all three arms: Claude Code (Sonnet 4.6) and Codex CLI (GPT-5.4) - sorry I'm behind on getting this out, keeping track of "the latest model" isn't part of this effort.
 
-The tasks themselves are small C binaries I had Claude write and then I modified afterwards to minimize the possibility a perfect training match (but they're all so simple it's likely you'd generate the same basic code even without an agent). Each was given exactly one deliberate bug or ctf-style "thing" to hunt down. Each binary the agent got was a stripped copy to mimic a more realistic item we'd see in actual reverse engineering tasks (symbols??? ... lol). Along with the binary, I had it create a brief (what to find, what to report, i.e. "the prompt") and a private grading rubric that never touches the agent's context, only the grader's. Everything was small enough I reviewed it by hand ... but you know, at scale, it would probably be more interesting.
+The tasks themselves are small C binaries I had Claude write and then I modified afterwards to minimize the possibility of a perfect training match (but they're all so simple it's likely you'd generate the same basic code even without an agent). Each was given exactly one deliberate bug or ctf-style "thing" to hunt down. Each binary the agent got was a stripped copy to mimic a more realistic item we'd see in actual reverse engineering tasks (symbols??? ... lol). Along with the binary, I had it create a brief (what to find, what to report, i.e. "the prompt") and a private grading rubric that never touches the agent's context, only the grader's. Everything was small enough I reviewed it by hand ... but you know, at scale, it would probably be more interesting.
 
 7 tasks x 3 arms x 5 repeats x 2 agents = 210 trials and more typing on the keyboard than I would have liked.
 
@@ -47,7 +48,7 @@ Seven tasks went into the matrix, each a stripped, never-published-before
 binary with one thing to find:
 
 - **`task01_license`**: a keygen-style check, given a username and serial, figure out the algorithm the binary uses to derive the expected serial from the username, then forge a valid pair
-- **`task02_overflow`**: an interactive console with an unbounded `strcpy` into a fixed crash it and explain, point to the vulnerable function address, and the offset to the saved return address
+- **`task02_overflow`**: an interactive console with an unbounded `strcpy` into a fixed stack buffer; crash it and explain why, point to the vulnerable function's address, and the offset to the saved return address
 - **`task03_callgraph`**: takes a single command byte and does something different for each. One of the eight paths reaches a piece of notable behavior through indirection (not a straight read of the input), and finding it means actually tracing the call graph instead of pattern matching the disassembly.
 - **`task04_xorblob`**: one "unlock" input causes different output; recover what that output actually is via static analysis alone, this one is one where we'd expect to see MCP only struggle since there are no other "tools" to enable the math
 - **`task05_record`**: another crack-me style, takes a hex-encoded fixed-size binary record and rejects most inputs; recover the exact field layout (offsets, sizes, valid ranges) and construct a hex string the binary accepts.
@@ -68,7 +69,7 @@ Every task has a rubric of specific claims an answer either does or doesn't make
 Because I am the fox guarding the hen house on this and wanted to let it run over the weekend ... grading itself is a second, separate LLM call, same model, fresh context, no tools that receives only the rubric and the trial's final answer text and returns a JSON verdict per checklist item (met/not-met plus a short
 note), which gets summed into a score. The grader never gets to see the transcript, so it
 can't be swayed by *how* the agent got there, only by what the final answer actually claims. Unfortunately, we can still trip up (as happened multiple times when debugging this crap) - the answer text itself can incidentally give away which arm produced it (an answer that name-drops a
-Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, NVIDIA or MCP Product XYZ is make any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has it's own new set of stupid problems). E.g. "Here be dragons."
+Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, NVIDIA or MCP Product XYZ is making any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has its own new set of stupid problems). E.g. "Here be dragons."
 
 ## Results
 
@@ -101,7 +102,7 @@ Codex shows a similar cost shape with `shell_mcp` being its best-scoring arm. Sa
 
 ### Observation Annoyance: Claude & Codex don't handle MCP loads in the same way
 
-Codex eagerly lists every MCP tool at session start; Claude Code defers almost everything, including MCP-provided tools, behind an explicit discovery step, so it doesn't even see the MCP surface until it goes looking for it. I had to nudge Claude's prompt to run tool discovery first specifically to compensate for that. This echos a similar challenge I faced when working with an older Claude at work last year. This means that any Claude-vs-Codex delta here is partly a statement about how each CLI surfaces MCP tools which likely impacts the numbers (an exercise left to the reader).
+Codex eagerly lists every MCP tool at session start; Claude Code defers almost everything, including MCP-provided tools, behind an explicit discovery step, so it doesn't even see the MCP surface until it goes looking for it. I had to nudge Claude's prompt to run tool discovery first specifically to compensate for that. This echoes a similar challenge I faced when working with an older Claude at work last year. This means that any Claude-vs-Codex delta here is partly a statement about how each CLI surfaces MCP tools which likely impacts the numbers (an exercise left to the reader).
 
 Additionally, when breaking that same data down per task makes the "it depends on the task and the agent" point more concrete than the rolled-up averages do:
 
@@ -113,7 +114,7 @@ Codex's `mcp_only` line actually *beats* its `shell` line on `overflow` and `cal
 
 ## Where this goes next
 
-The 7-task set above is a simple comparison which say there might be something wrong with the vibes *depending* on what variable you're attempting to maximize. If you're overly cost constrained, and the scaling holds true, 15-20% savings on your budget might be worth standing up all of the other infrastructure necessary to get the MCP systems working, especially if you're looking at hundreds of binaries or massive binaries (looking at you {insert_redacted})... but if you're pressed for time, you might get roughly the same results without the MCP system (in this type of use case for these types of evaluations).
+The 7-task set above is a simple comparison which says there might be something wrong with the vibes *depending* on what variable you're attempting to maximize. If you're overly cost constrained, and the scaling holds true, 15-20% savings on your budget might be worth standing up all of the other infrastructure necessary to get the MCP systems working, especially if you're looking at hundreds of binaries or massive binaries (looking at you {insert_redacted})... but if you're pressed for time, you might get roughly the same results without the MCP system (in this type of use case for these types of evaluations).
 
 I think we can say it's clear that MCP does help in some cases; however, it's far from a definitive "MCP **ALWAYS GETS THE W**".
 

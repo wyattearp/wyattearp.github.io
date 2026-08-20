@@ -17,7 +17,7 @@ The goal here isn't to say "MCP is worthless! Stop buying snake oil!!!" - it's m
 To me the question is simple - is MCP for reverse engineering tasks a placebo?
 If it's a placebo, the agent is doing fine because it's a capable model with a shell, not because the MCP server taught it anything a `file`/`objdump`/`gdb` combo couldn't, right? Maybe stated more clearly:
 
-*"An agent with access to a MCP system **WILL CONSISTENTLY** outperform the same agent restricted to to coreutils + binutils + gdb + radare2 on a set of small RE tasks."*
+*"An agent with access to a MCP system **WILL CONSISTENTLY** outperform the same agent restricted to coreutils + binutils + gdb + radare2 on a set of small RE tasks."*
 
 Sadly I don't have infinite tokens to solve this side quest, but here's what I got over a weekend's worth of execution. Full disclosure, AI helped me bolt a lot of this together because I have more ideas than time - you get what you get.
 
@@ -25,7 +25,7 @@ Sadly I don't have infinite tokens to solve this side quest, but here's what I g
 
 ## Approach
 
-I worked with claude and built a small harness, around three "arms" different tool-access configurations for the same agent on the same task. The "arms" were:
+I worked with Claude and built a small harness, around three "arms" of different tool-access configurations for the same agent on the same task. The "arms" were:
 
 - **`shell`** - shell/exec tools plus coreutils, binutils, gdb, radare2. No MCP
   at all. This is the "person doing it manually" baseline.
@@ -34,7 +34,7 @@ I worked with claude and built a small harness, around three "arms" different to
 - **`mcp_only`** - Ghidra MCP server only, shell/exec disabled entirely. Forces
   the agent to live inside Ghidra's decompiler/tool surface with no fallback.
 
-**Why MCP Only???** you might ask - and my answer intent is that it is the control. Logically, if we removed every tool from the agent **except** MCP, now the agent and the model have to do all of the hard work normal things could solve (math, XORs, etc.). If the harness is working correctly, we should consistently see that MCP only scores horribly worse than either `shell` or `shell_mcp`
+**Why MCP Only???** you might ask - and my answer intent is that it is the control. Logically, if we removed every tool from the agent **except** MCP, now the agent and the model have to do all of the hard work normal things could solve (math, XORs, etc.). If the harness is working correctly, we should consistently see that MCP only scores horribly worse than either `shell` or `shell_mcp`.
 
 Two agent CLIs got run through all three arms: Claude Code (Sonnet 4.6) and Codex CLI (GPT-5.4) - sorry I'm behind on getting this out, keeping track of "the latest model" isn't part of this effort.
 
@@ -50,10 +50,11 @@ binary with one thing to find:
 - **`task01_license`**: a keygen-style check, given a username and serial, figure out the algorithm the binary uses to derive the expected serial from the username, then forge a valid pair
 - **`task02_overflow`**: an interactive console with an unbounded `strcpy` into a fixed stack buffer; crash it and explain why, point to the vulnerable function's address, and the offset to the saved return address
 - **`task03_callgraph`**: takes a single command byte and does something different for each. One of the eight paths reaches a piece of notable behavior through indirection (not a straight read of the input), and finding it means actually tracing the call graph instead of pattern matching the disassembly.
-- **`task04_xorblob`**: one "unlock" input causes different output; recover what that output actually is via static analysis alone, this one is one where we'd expect to see MCP only struggle since there are no other "tools" to enable the math
+- **`task04_xorblob`**: one "unlock" input causes different output; recover what that output actually is via static analysis alone, this is the task where we'd expect MCP only to struggle since there are no other "tools" to enable the math
 - **`task05_record`**: another crack-me style, takes a hex-encoded fixed-size binary record and rejects most inputs; recover the exact field layout (offsets, sizes, valid ranges) and construct a hex string the binary accepts.
 - **`task06_fmtstring`**: another interactive console, this time with a classic format-string bug, get it to leak memory or crash, and correctly classify what kind of bug it is.
-- **`task07_vm`**: takes a hex string, interprets it as bytecode for a small custom instruction set, reverse the opcode table, then hand-craft a program that makes it print exactly `1337`
+- **`task07_vm`**: takes a hex string, interprets it as bytecode for a small custom instruction set, reverse the opcode table, then hand-craft a program that makes it print exactly `1337`.
+
 ## How the scoring actually works
 
 Every task has a rubric of specific claims an answer either does or doesn't make, each worth 1-2 points, adding up to a task-specific max (6 points for these 7). `task02_overflow`'s, for example:
@@ -66,10 +67,10 @@ Every task has a rubric of specific claims an answer either does or doesn't make
 | `vuln_primitive` | 1 | correctly calls it an unbounded `strcpy` into a fixed-size stack buffer |
 | `offset_to_ret` | 2 | reports the byte offset from the buffer to the saved return address |
 
-Because I am the fox guarding the hen house on this and wanted to let it run over the weekend ... grading itself is a second, separate LLM call, same model, fresh context, no tools that receives only the rubric and the trial's final answer text and returns a JSON verdict per checklist item (met/not-met plus a short
+Because I am the fox guarding the hen house on this and wanted to let it run over the weekend ... grading itself is a second, separate LLM call — same model, fresh context, no tools — that receives only the rubric and the trial's final answer text and returns a JSON verdict per checklist item (met/not-met plus a short
 note), which gets summed into a score. The grader never gets to see the transcript, so it
 can't be swayed by *how* the agent got there, only by what the final answer actually claims. Unfortunately, we can still trip up (as happened multiple times when debugging this crap) - the answer text itself can incidentally give away which arm produced it (an answer that name-drops a
-Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, Nvidia or MCP Product XYZ is making any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has its own new set of stupid problems). E.g. "Here be dragons."
+Ghidra decompile call and now the dumb grading agent decides to spawn a sub-agent to go verify the claim...). As I highly doubt anyone from Anthropic, OpenAI, NVIDIA or MCP Product XYZ is making any grand sweeping changes based on this data, it's fine as it is; however, it is at least called out that it's an area in some other harnesses I decided to specifically move to "static grading" (which has its own new set of stupid problems). E.g. "Here be dragons."
 
 ## Results
 

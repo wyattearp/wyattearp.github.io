@@ -98,7 +98,7 @@ Claude scores marginally lower with MCP bolted on (95.7% vs 97.6%). This is smal
 Codex shows a similar cost shape with `shell_mcp` being its best-scoring arm. Sadly tokens between Claude / Codex aren't really equal, so it's hard to say which is the most token-expensive one, so sadly there isn't a single "MCP is cheaper" or "MCP is pricier" story here and it looks to be agent-specific (with a stupid reason).
 
 ### Observation: The `mcp_only` no-calculator knee-capping doesn't promise it'll hurt
-`mcp_only` disables shell entirely, which means no scratch arithmetic either. On the XOR-blob task that's a real cost. And yet Claude scores *highest* on that exact task in `mcp_only` (100% vs 96.7% in `shell`), doing the keystream math by hand. Codex shows the opposite pattern on the identical task. Same constraint, opposite outcome, depending on the agent - or in my opinion, likely the model.
+`mcp_only` disables shell entirely, which means no scratch arithmetic either. On the XOR-blob task that should be a real sticking point. And yet Claude scores *highest* on that exact task in `mcp_only` (100% vs 96.7% in `shell`), doing the keystream math by hand. Codex shows the opposite pattern on the identical task. Same constraint, opposite outcome, depending on the agent - or in my opinion, likely the model.
 
 ### Observation Annoyance: Claude & Codex don't handle MCP loads in the same way
 
